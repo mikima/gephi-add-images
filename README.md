@@ -12,6 +12,18 @@ The script need Beautiful soup 4 to run. [Here are the instruction on how to ins
 3. Put the python script, the SVG and a folder with the images in the same place
 4. run the python script:
 
-`python replace-with-images.py <input_file.svg> <name_of_images_folder> <output_file.svg>`
+`python replace-with-images.py <input_file.svg> <name_of_images_folder> <upscaling> <output_file_name>`
+
+**input file:** the network exported from Gephi
+
+**image folder:** path of the folder containing images, starting from the folder containing the script. Default value: `none`
+
+**Upscaling: **multiplicator for the size of the images (e.g. 2 will double their size). Default value: `1`
+
+**Output file name:** the name of the output file. Default value: `output`
+
+e.g.
+
+`python replace-with-images.py my-network.svg images/ 4 my-tetwork-images`
 
 Only the first parameter is compulsory.
