@@ -24,6 +24,6 @@ The script need Beautiful soup 4 to run. [Here are the instruction on how to ins
 
 e.g.
 
-`python replace-with-images.py my-network.svg images/ 4 my-tetwork-images`
+`python replace-with-images.py my-network.svg images/ 4 my-network-with-images`
 
 Only the first parameter is compulsory.
