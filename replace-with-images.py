@@ -19,6 +19,13 @@ soup = BeautifulSoup(open(inName), "xml")
 labels = soup.find('g', {'id' : 'node-labels'})
 texts = labels.find_all('text')
 
+newLabels = soup.new_tag("g", id="newgroups")
+imgTags = soup.new_tag("g", id="images")
+textTags = soup.new_tag("g", id="labels")
+
+newLabels.append(imgTags)
+newLabels.append(textTags)
+
 for text in texts:
 	x = float(text['x'])
 	y = float(text['y'])
@@ -30,7 +37,11 @@ for text in texts:
 		new_tag = soup.new_tag("image", x=x - size/2,y=y - size/2, width=size, height=size)
 		new_tag['xlink:href'] = folderName + match[0][0]
 		print new_tag
-		text.replace_with(new_tag)
+		imgTags.append(new_tag)
+	else:
+		textTags.append(text)
+
+labels.replace_with(newLabels)
 
 with open(outName+".svg", "w") as file:
 	file.write(str(soup))
