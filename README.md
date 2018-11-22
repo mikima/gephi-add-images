@@ -18,7 +18,7 @@ The script need Beautiful soup 4 to run. [Here are the instruction on how to ins
 
 **image folder:** path of the folder containing images, starting from the folder containing the script. Default value: `none`
 
-**Upscaling: **multiplicator for the size of the images (e.g. 2 will double their size). Default value: `1`
+**Upscaling:** multiplicator for the size of the images (e.g. 2 will double their size). Default value: `1`
 
 **Output file name:** the name of the output file. Default value: `output`
 
